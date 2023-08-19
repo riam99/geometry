@@ -17,9 +17,9 @@
         <!-- Main Container -->
         <div class="flex flex-col lg:flex-row">
             <!-- Shape Calculator -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10">
                 <!-- Triangle card -->
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-[375px] bg-base-100 shadow-xl">
                     <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Triangle</h2>
@@ -45,7 +45,7 @@
                 </div>
 
                 <!-- Rectangle card -->
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-[375px] bg-base-100 shadow-xl">
                     <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Rectangle</h2>
@@ -69,10 +69,64 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Parallelogram card -->
+                <div class="card w-[375px] bg-base-100 shadow-xl">
+                    <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area (A) = b x h</p>
+                        <p>
+                            <!-- Parallelogram base -->
+                            <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="base" name=""
+                                id="parallelogram-base">
+                            <span class="ml-2">cm</span>
+
+                            <!-- Parallelogram height -->
+                            <input type="text" class="border bg-gray-200 text-xl w-24 px-2 ml-2" placeholder="height"
+                                name="" id="parallelogram-height">
+                            <span class="ml-2">h</span>
+                        </p>
+                        <p class="text-2xl">
+                            Area: <span id="parallelogram-area">0</span> cm<sup>2</sup>
+                        </p>
+                        <div class="card-actions">
+                            <button onclick="calculateParallelogramArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ellipse card -->
+                <div class="card w-[375px] bg-base-100 shadow-xl">
+                    <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Ellipse</h2>
+                        <p>Area (A) = π ab</p>
+                        <p>
+                            <!-- Ellipse large -->
+                            <input type="text" class="border bg-gray-200 text-xl w-24 px-2" placeholder="large" name=""
+                                id="ellipse-large">
+                            <span class="ml-2">cm</span>
+
+                            <!-- Ellipse short -->
+                            <input type="text" class="border bg-gray-200 text-xl w-24 px-2 ml-2" placeholder="short"
+                                name="" id="ellipse-short">
+                            <span class="ml-2">h</span>
+                        </p>
+                        <p class="text-2xl">
+                            Area: <span id="ellipse-area">0</span> cm<sup>2</sup>
+                        </p>
+                        <div class="card-actions">
+                            <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Area Calculator -->
-            <div class="w-[400px]">
+            <div class="w-[300px] mt-10">
                 <div class="text-4xl">Area Calculator</div>
+                <div id="calculation-entry">
+
+                </div>
             </div>
         </div>
     </main>
